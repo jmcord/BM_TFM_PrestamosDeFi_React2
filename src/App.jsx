@@ -1,16 +1,23 @@
-import Header from "./components/Header"
-import Footer from "./components/Footer"
+import {AppLayout} from "./components/ui/layouts"
+import {Home} from "./pages"
+import { ConnectKitProvider, ConnectKitButton, getDefaultConfig } from "connectkit";
 
 function App() {
  
   return (
-  <>
-    <Header />
-    <main>Contenido</main>
-    <Footer />
+ 
 
-  </>
-  )
+      <ConnectKitProvider>
+         <AppLayout />
+          <Home />
+         </AppLayout>
+        <ConnectKitButton />
+      </ConnectKitProvider>
+
+  );
+
+
+
 }
 
 export default App
